@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhavya Kandhari - Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-main">
+        <h1>Bhavya Kandhari</h1>
+        <p class="contact-info">
+          <a href="mailto:bhavya.kandhari.eng@gmail.com">Email</a>
+          <span class="separator"> | </span>
+          <a
+            href="https://www.linkedin.com/in/kandharibhavya/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <span class="separator"> | </span>
+          <a
+            href="https://github.com/bkandh30"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <span class="separator"> | </span>
+          <a
+            href="https://bhavyakandhari.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Portfolio</a
+          >
+        </p>
+      </header>
+
+      <section id="education" class="section-item">
+        <h2>EDUCATION</h2>
+        <div class="item mb-4 clearfix">
+          <span class="date">Aug 2023 – May 2025</span>
+          <h3 class="item-title">Masters in Computer Science</h3>
+          <p class="item-subtitle">Arizona State University, Tempe, Arizona</p>
+          <p class="details">CGPA: 3.93/4</p>
+        </div>
+        <div class="item clearfix">
+          <span class="date">Aug 2017 – May 2021</span>
+          <h3 class="item-title">Bachelor of Technology in Computer Science</h3>
+          <p class="item-subtitle">Amity University, India</p>
+          <p class="details">CGPA: 8.17/10</p>
+        </div>
+      </section>
+
+      <section id="experience" class="section-item">
+        <h2>EXPERIENCE</h2>
+        <div class="item clearfix">
+          <span class="date">Sep 2021 – July 2023</span>
+          <h3 class="item-title">Associate Software Engineer</h3>
+          <p class="item-subtitle">
+            Ernst & Young, Global Delivery Services, India
+          </p>
+          <ul>
+            <li>
+              Collaborated with cross-functional teams to define and standardize
+              cybersecurity KPIs, improving metric clarity and reporting quality
+              across 6 departments.
+            </li>
+            <li>
+              Designed and deployed anomaly detection models using time-series
+              analysis to improve incident investigation efficiency by 20%.
+            </li>
+            <li>
+              Automated IP enrichment workflows using AWS Redshift, AWS Glue,
+              AWS Lambda, and Secrets Manager, reducing manual processing time
+              by 1.5 hours/day.
+            </li>
+            <li>
+              Built scalable ETL pipelines with AWS Glue and developed data
+              profiling dashboards using AWS QuickSight to monitor data quality
+              and distribution.
+            </li>
+            <li>
+              Integrated NVD and CAPEC databases to map over 65% of CVEs to
+              MITRE ATT&CK framework, enhancing threat intelligence coverage.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="technical-projects" class="section-item">
+        <h2>TECHNICAL PROJECTS</h2>
+        <div class="item mb-4 clearfix">
+          <span class="date">Apr 2025 – Apr 2025</span>
+          <h3 class="item-title">Async Text Summarization Microservice</h3>
+          <p class="project-links">
+            <a
+              href="https://github.com/bkandh30/fastAPI-summary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            | FastAPI, Docker, NLTK
+          </p>
+          <ul>
+            <li>
+              Developed a containerized (Docker/Compose) asynchronous RESTful
+              API using Python, FastAPI, Pydantic, and Tortoise ORM for text
+              summarization.
+            </li>
+            <li>
+              Implemented CRUD, PostgreSQL persistence (Asyncpg) with Aerich
+              migrations, and integrated newspaper3k/NLTK for article
+              processing/summarization.
+            </li>
+            <li>
+              Ensured code reliability via TDD with Pytest (unit/integration,
+              pytest-cov, pytest-xdist), linting (Flake8), and formatting
+              (Black/isort).
+            </li>
+          </ul>
+        </div>
+        <div class="item mb-4 clearfix">
+          <span class="date">Mar 2025 – Mar 2025</span>
+          <h3 class="item-title">Git Implementation</h3>
+          <p class="project-links">
+            <a
+              href="https://github.com/bkandh30/git-implementation"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            | Python
+          </p>
+          <ul>
+            <li>
+              Recreated core Git operations (init, commit, tree, blob) using
+              SHA-1 hashing and zlib compression for content addressing.
+            </li>
+            <li>
+              Designed an object model to manage Git internals and built local
+              repository functionality from scratch.
+            </li>
+            <li>
+              Implemented HTTP remote cloning, including ref fetching, packfile
+              parsing, and delta resolution for efficient file storage.
+            </li>
+          </ul>
+        </div>
+        <div class="item clearfix">
+          <span class="date">Nov 2023 – Dec 2023</span>
+          <h3 class="item-title">
+            Video Reconstruction from Randomized Frames
+          </h3>
+          <p class="project-links">
+            <a
+              href="https://github.com/bkandh30/Randomized-VideoFrames-Reconstruction"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            | OpenCV, Numpy
+          </p>
+          <ul>
+            <li>
+              Applied and compared ORB and SURF feature detectors to extract
+              keypoints from randomized frames, selecting ORB based on
+              computational efficiency and descriptor quality.
+            </li>
+            <li>
+              Implemented three sorting strategies Growth-based, Hierarchical
+              Clustering, and a TSP-inspired approach to reorder frames based on
+              visual similarity, achieving improved temporal reconstruction.
+            </li>
+            <li>
+              Developed and benchmarked sequencing accuracy using both the
+              original Logistic Loss Metric and a custom Sequential Order Error,
+              validating improvements over baseline methods.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="technical-skills" class="section-item">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills-category">
+          <p class="details">
+            <strong>Languages:</strong> Python, JavaScript, TypeScript, SQL
+          </p>
+        </div>
+        <div class="skills-category">
+          <p class="details">
+            <strong>Frameworks/Libraries:</strong> React, Node.js, Express,
+            FastAPI, Next.js, TailwindCSS
+          </p>
+        </div>
+        <div class="skills-category">
+          <p class="details"><strong>Databases:</strong> PostgreSQL, MongoDB</p>
+        </div>
+        <div class="skills-category">
+          <p class="details">
+            <strong>BI Tools:</strong> Power BI, AWS Quicksight, Tableau
+          </p>
+        </div>
+        <div class="skills-category">
+          <p class="details">
+            <strong>Cloud & DevOps:</strong> AWS, Docker, Git/GitHub,
+            Prometheus, Grafana, NGINX
+          </p>
+        </div>
+        <div class="skills-category">
+          <p class="details">
+            <strong>Data Processing:</strong> Apache Flink, Spark, Kafka
+          </p>
+        </div>
+        <div class="skills-category">
+          <p class="details"><strong>Testing:</strong> PyTest, Cypress</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

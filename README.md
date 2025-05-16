@@ -9,3 +9,7 @@ The Cloud Resume Challenge is a hands-on project designed to help individuals le
 ## Architecture Diagram
 
 ![Architecture Diagram](architecture.png)
+
+## Challenge Steps & Implementation
+
+Below are the core components of the challenge and how I approached them:
