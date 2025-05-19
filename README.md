@@ -58,7 +58,7 @@ A serverless backend was implemented to track the number of visitors to the resu
 
 - **Purpose**: To persistently store and manage the website's visitor count.
 - **Implementation**:
-  - A DynamoDB table named `resume-challenge` was provisioned.
+  - A DynamoDB table named `cloud-resume-challenge` was provisioned.
   - The table uses a primary key (e.g., `id` of type String or Number). For this project, a specific item (e.g., with `id` = "1" or "visitor_count_item") is used to store the count.
   - An attribute named `views` (Number) stores the visitor count. This item was initialized with a starting value (e.g., 0 or 1, as per the challenge's initial setup described by the user as `id`=1, `views`=1).
   - The Lambda function has IAM permissions to read and update this specific item in the DynamoDB table.
@@ -70,11 +70,11 @@ A serverless backend was implemented to track the number of visitors to the resu
   - Developed using **Python 3.13**.
   - The function's core logic involves:
     - Receiving the request from API Gateway.
-    - Interacting with the `cloud-resume-challenge-test` DynamoDB table to atomically increment the `views` attribute for the designated counter item.
+    - Interacting with the `cloud-resume-challenge` DynamoDB table to atomically increment the `views` attribute for the designated counter item.
     - Returning the updated `views` count in the HTTP response.
   - **IAM Role**: An IAM role was created and assigned to the Lambda function, granting it permissions to:
     - Write logs to Amazon CloudWatch Logs (for monitoring and debugging).
-    - Perform `dynamodb:UpdateItem` and `dynamodb:GetItem` actions on the specific `cloud-resume-challenge-test` DynamoDB table resource.
+    - Perform `dynamodb:UpdateItem` and `dynamodb:GetItem` actions on the specific `cloud-resume-challenge` DynamoDB table resource.
 - **Amazon API Gateway**:
 
   - An HTTP API (or REST API) endpoint was configured in API Gateway.
