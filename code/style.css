@@ -201,3 +201,18 @@ li {
         margin-left: 1rem;
     }
 }
+
+.footer-main {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+#visitor-count {
+    font-weight: 600;
+    color: #2c5282;
+}
