@@ -74,7 +74,7 @@ A serverless backend was implemented to track the number of visitors to the resu
     - Returning the updated `views` count in the HTTP response.
   - **IAM Role**: An IAM role was created and assigned to the Lambda function, granting it permissions to:
     - Write logs to Amazon CloudWatch Logs (for monitoring and debugging).
-    - Perform `dynamodb:UpdateItem` and `dynamodb:GetItem` actions on the specific `cloud-resume-challenge` DynamoDB table resource.
+    - Perform `dynamodb:UpdateItem`, `dynamodb:GetItem` and `dynamodb:PutItem` actions on the specific `cloud-resume-challenge` DynamoDB table resource.
 - **Amazon API Gateway**:
 
   - An HTTP API (or REST API) endpoint was configured in API Gateway.
