@@ -46,8 +46,6 @@ The Cloud Resume Challenge is a hands-on project designed to help individuals le
   - An **Alias record** was created within the appropriate hosted zone for the custom domain.
   - This Alias record points the custom domain name (e.g., `resume.yourdomain.com` or `www.yourdomain.com`) to the Amazon CloudFront distribution domain name. Using an Alias record is an AWS best practice for routing traffic to AWS resources like CloudFront.
 
----
-
 ## Deployment & Accessing the Live Resume
 
 Once the CloudFront distribution was successfully deployed and the DNS records in Route 53 had propagated:
