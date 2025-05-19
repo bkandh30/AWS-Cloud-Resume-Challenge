@@ -58,7 +58,7 @@ A serverless backend was implemented to track the number of visitors to the resu
 
 - **Purpose**: To persistently store and manage the website's visitor count.
 - **Implementation**:
-  - A DynamoDB table named `cloud-resume-challenge-test` was provisioned.
+  - A DynamoDB table named `resume-challenge` was provisioned.
   - The table uses a primary key (e.g., `id` of type String or Number). For this project, a specific item (e.g., with `id` = "1" or "visitor_count_item") is used to store the count.
   - An attribute named `views` (Number) stores the visitor count. This item was initialized with a starting value (e.g., 0 or 1, as per the challenge's initial setup described by the user as `id`=1, `views`=1).
   - The Lambda function has IAM permissions to read and update this specific item in the DynamoDB table.
@@ -118,4 +118,4 @@ Once the CloudFront distribution was deployed and DNS records in Route 53 propag
 1.  The website was first tested using the **CloudFront Distribution Domain Name** (e.g., `d12345abcdef.cloudfront.net`) to ensure content delivery.
 2.  After DNS propagation, the **custom domain name** (e.g., `https://resume.yourdomain.com`) was accessed to verify the complete setup.
 
-**Live Resume URL**:
+**Live Resume URL**: bhavyakandhari.com
