@@ -96,7 +96,7 @@ A Continuous Integration/Continuous Deployment (CI/CD) pipeline automates the de
 
 **Prerequisites:**
 
-- An AWS IAM User with programmatic access and the necessary permissions to upload to S3 and create CloudFront invalidations (see Step 1 in the previous CI/CD setup guide).
+- An AWS IAM User with programmatic access and the necessary permissions to upload to S3 and create CloudFront invalidations.
 - Your AWS Access Key ID, Secret Access Key, S3 bucket name, CloudFront Distribution ID, and AWS region.
 
 **Setup Steps:**
@@ -112,7 +112,6 @@ A Continuous Integration/Continuous Deployment (CI/CD) pipeline automates the de
 
     - Inside the `.github/workflows/` directory, create a YAML file named `deploy-frontend.yml` (or a similar descriptive name).
     - Populate this file with the workflow definition. This definition will specify the triggers (e.g., push to `main` branch) and the jobs/steps to execute (checkout code, configure AWS credentials, sync files to S3, invalidate CloudFront).
-      _Refer to the `deploy-frontend.yml` example provided in the CI/CD setup guide for the content of this file._
 
 3.  **Configure GitHub Secrets:**
 
