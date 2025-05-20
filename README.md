@@ -123,6 +123,7 @@ A Continuous Integration/Continuous Deployment (CI/CD) pipeline automates the de
       - `AWS_SECRET_ACCESS_KEY`: Your AWS IAM user's secret access key.
       - `AWS_S3_BUCKET`: The name of your S3 bucket where the frontend files will be deployed.
       - `AWS_REGION`: The AWS region where your S3 bucket and other relevant resources are located (e.g., `us-east-1`).
+      - `SOURCE_DIR`: The source directory location.
 
 4.  **Commit and Push Workflow:**
 
