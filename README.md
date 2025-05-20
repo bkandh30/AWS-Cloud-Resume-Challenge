@@ -123,7 +123,6 @@ A Continuous Integration/Continuous Deployment (CI/CD) pipeline automates the de
       - `AWS_ACCESS_KEY_ID`: Your AWS IAM user's access key ID.
       - `AWS_SECRET_ACCESS_KEY`: Your AWS IAM user's secret access key.
       - `AWS_S3_BUCKET`: The name of your S3 bucket where the frontend files will be deployed.
-      - `AWS_CLOUDFRONT_DISTRIBUTION_ID`: The ID of your CloudFront distribution.
       - `AWS_REGION`: The AWS region where your S3 bucket and other relevant resources are located (e.g., `us-east-1`).
 
 4.  **Commit and Push Workflow:**
