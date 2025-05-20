@@ -90,6 +90,52 @@ A serverless backend was implemented to track the number of visitors to the resu
   - Upon receiving a successful response, the script parses the JSON data (containing the count) and updates the content of a designated HTML element (e.g., `<span id="visitor-count"></span>`) on the page.
   - Error handling is included to manage potential issues during the API call.
 
+### CI/CD Pipeline for Frontend Deployment (GitHub Actions)
+
+A Continuous Integration/Continuous Deployment (CI/CD) pipeline automates the deployment of the frontend (HTML, CSS, JavaScript) to AWS S3 and handles CloudFront cache invalidation whenever changes are pushed to the main repository branch. This is achieved using GitHub Actions.
+
+**Prerequisites:**
+
+- An AWS IAM User with programmatic access and the necessary permissions to upload to S3 and create CloudFront invalidations (see Step 1 in the previous CI/CD setup guide).
+- Your AWS Access Key ID, Secret Access Key, S3 bucket name, CloudFront Distribution ID, and AWS region.
+
+**Setup Steps:**
+
+1.  **Repository Structure:**
+
+    - Ensure you have cloned your GitHub repository to your local development environment.
+    - Within your repository, create a directory structure for GitHub Actions: `.github/workflows/`.
+      - Create the `.github` directory at the root of your repository if it doesn't exist.
+      - Inside `.github`, create the `workflows` directory.
+
+2.  **Create the Workflow File:**
+
+    - Inside the `.github/workflows/` directory, create a YAML file named `deploy-frontend.yml` (or a similar descriptive name).
+    - Populate this file with the workflow definition. This definition will specify the triggers (e.g., push to `main` branch) and the jobs/steps to execute (checkout code, configure AWS credentials, sync files to S3, invalidate CloudFront).
+      _Refer to the `deploy-frontend.yml` example provided in the CI/CD setup guide for the content of this file._
+
+3.  **Configure GitHub Secrets:**
+
+    - Before the GitHub Actions workflow can successfully interact with your AWS account, you must securely store your AWS credentials and resource identifiers as encrypted secrets in your GitHub repository.
+    - Navigate to your GitHub repository's **Settings**.
+    - In the left sidebar, under "Security," click on **Secrets and variables** > **Actions**.
+    - Click **New repository secret** for each of the following, providing the corresponding value:
+      - `AWS_ACCESS_KEY_ID`: Your AWS IAM user's access key ID.
+      - `AWS_SECRET_ACCESS_KEY`: Your AWS IAM user's secret access key.
+      - `AWS_S3_BUCKET`: The name of your S3 bucket where the frontend files will be deployed.
+      - `AWS_CLOUDFRONT_DISTRIBUTION_ID`: The ID of your CloudFront distribution.
+      - `AWS_REGION`: The AWS region where your S3 bucket and other relevant resources are located (e.g., `us-east-1`).
+
+4.  **Commit and Push Workflow:**
+
+    - Commit the newly created `.github/workflows/deploy-frontend.yml` file to your local repository.
+    - Push these changes to your remote GitHub repository (typically to the `main` branch).
+
+5.  **Monitor Workflow Execution:**
+    - Once the changes are pushed, navigate to the **Actions** tab in your GitHub repository.
+    - You should see the "Deploy Frontend to AWS S3 and Invalidate CloudFront" workflow trigger and run.
+    - You can click on the workflow run to see the details of each step. If all secrets are correctly configured and the IAM user has the right permissions, the deployment should succeed.
+
 ## Technologies Used
 
 - **AWS Services**:
