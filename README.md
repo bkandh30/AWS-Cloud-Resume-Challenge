@@ -156,6 +156,8 @@ The cloud infrastructure for this project is managed programmatically using Terr
     - Create a subdirectory `lambda` within `infra`.
     - Place the Python code for the AWS Lambda function in `func.py` inside `infra/lambda/`.
 
+Note: Make sure to change the lambda function URL to `func` lambda function.
+
 **Deployment Steps:**
 
 1.  **Navigate to Directory:**
