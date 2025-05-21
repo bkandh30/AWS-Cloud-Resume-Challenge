@@ -223,4 +223,5 @@ Once the CloudFront distribution was deployed and DNS records in Route 53 propag
 1.  The website was first tested using the **CloudFront Distribution Domain Name** (e.g., `d12345abcdef.cloudfront.net`) to ensure content delivery.
 2.  After DNS propagation, the **custom domain name** (e.g., `https://resume.yourdomain.com`) was accessed to verify the complete setup.
 
-**Live Resume URL**: [bhavyakandhari.com](https://bhavyakandhari.com)
+**Project Preview**
+[Watch the screencast](screencast.mov)
