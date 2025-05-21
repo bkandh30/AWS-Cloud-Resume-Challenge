@@ -135,6 +135,64 @@ A Continuous Integration/Continuous Deployment (CI/CD) pipeline automates the de
     - You should see the "Deploy Frontend to AWS S3 and Invalidate CloudFront" workflow trigger and run.
     - You can click on the workflow run to see the details of each step. If all secrets are correctly configured and the IAM user has the right permissions, the deployment should succeed.
 
+### Infrastructure as Code: Provisioning with Terraform
+
+The cloud infrastructure for this project is managed programmatically using Terraform, enabling consistent and repeatable deployments while securely handling configuration.
+
+**Project Structure & Configuration:**
+
+1.  **Terraform Configuration Directory:**
+
+    - Create a dedicated directory named `infra` at the project's root.
+
+2.  **Core Terraform Files:**
+
+    - **`provider.tf`:** (Inside `infra`) Configures the AWS provider (e.g., region).
+    - **`variables.tf`:** (Inside `infra`) Defines input variables, such as the DynamoDB table ARN, to avoid hardcoding sensitive information.
+    - **`main.tf`:** (Inside `infra`) Contains the declarative definitions of all AWS resources, referencing variables where necessary.
+    - **`terraform.tfvars`:** (Inside `infra`, **ensure this is in `.gitignore`**) Provides values for the defined variables. You will need to create this file locally.
+
+3.  **Lambda Function Code:**
+    - Create a subdirectory `lambda` within `infra`.
+    - Place the Python code for the AWS Lambda function in `func.py` inside `infra/lambda/`.
+
+**Deployment Steps:**
+
+1.  **Navigate to Directory:**
+
+    ```bash
+    cd infra
+    ```
+
+2.  **Prepare Variables (If not done):**
+
+    - Create a `terraform.tfvars` file within the `infra` directory.
+    - Add necessary variable assignments, for example:
+      ```
+      dynamodb_table_arn = "your-dynamodb-table-arn"
+      ```
+
+3.  **Initialize Terraform:**
+    Download provider plugins and prepare the backend:
+
+    ```bash
+    terraform init
+    ```
+
+4.  **Review Deployment Plan:**
+    Preview the changes Terraform will make:
+
+    ```bash
+    terraform plan
+    ```
+
+5.  **Apply Configuration:**
+    Deploy the infrastructure:
+    ```bash
+    terraform apply
+    ```
+    Confirm by typing `yes` when prompted.
+
 ## Technologies Used
 
 - **AWS Services**:

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const visitorCountElement = document.getElementById('visitor-count');
 
-    const apiGatewayUrl = 'https://4bccrcdschbqkyvbnxt5pswxwi0kplfb.lambda-url.us-east-1.on.aws/';
+    const apiGatewayUrl = 'https://7d53coje7ngbsggsb7iry6poru0ghscm.lambda-url.us-east-1.on.aws/';
 
     async function updateVisitorCount() {
         if (!visitorCountElement) {
