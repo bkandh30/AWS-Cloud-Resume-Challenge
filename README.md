@@ -225,3 +225,5 @@ Once the CloudFront distribution was deployed and DNS records in Route 53 propag
 
 **Project Preview**
 [Watch the screencast](screencast.mov)
+
+Note: To avoid further AWS charges, I have deleted all the cloud infrastructure that was used for this challenge.
